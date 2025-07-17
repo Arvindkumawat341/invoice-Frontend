@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { baseURL } from "../lib/constant.ts";
-import { Download, FileChartLine, MapPin, PackageSearch, Phone, Plus, Save, UserRound } from "lucide-react";
+import {  FileChartLine, MapPin, PackageSearch, Phone, Plus, Save, UserRound } from "lucide-react";
 import jsPDF from "jspdf";
 import PdfTemplate from "@/components/ui/PdfTemplate.tsx";
 import html2canvas from "html2canvas";
 import { MdDeleteOutline } from "react-icons/md";
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 
 interface Customer {
     _id: string;
@@ -62,7 +62,7 @@ interface Invoice {
 
 
 function CreateInvoice() {
-    const [activeSection, setActiveSection] = useState<"Name" | "item" | null>(null);
+    const [, setActiveSection] = useState<"Name" | "item" | null>(null);
     const [customer, setCustomer] = useState<Customer[]>([]);
     const [selectcustomer, setSelectCustomer] = useState<Customer | null>(null);
 
@@ -90,7 +90,7 @@ function CreateInvoice() {
     const [overallDiscount, setOverallDiscount] = useState<string>("");
     const templateRef = useRef<HTMLDivElement>(null);
     const [status, setStatus] = useState("");
-    const [fetchedInvoice, setFetchedInvoice] = useState<any>(null);
+
     //Invoice
     const [invoice, setInvoice] = useState<Invoice>({
         id: "",
