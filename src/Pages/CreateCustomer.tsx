@@ -86,7 +86,7 @@ function CreateCustomer() {
 
     return (
         <div className="">
-            <div className="bg-white w-full md:w-[60%]  border mt-5 rounded-xl shadow-ms mx-auto ms:mx-0">
+            <div className="bg-white w-full md:w-[60%]  border mt-0 md:mt-5 rounded-xl shadow-ms mx-auto ms:mx-0">
                 <h1 className="bg-[#1D3557] rounded-t-lg text-xl md:text-2xl  font-bold mb-4 text-center text-white border-b py-4">Create Customer</h1>
                 <form onSubmit={handleSubmit} className="p-4 md:p-8">
                     <div className="mb-4">
@@ -173,7 +173,9 @@ function CreateCustomer() {
                                 required
                             />
                         </div>
-                        <div className="w-full md:w-1/3">
+                        
+                    </div>
+                    <div className="mt-4">
                             <label htmlFor="country" className="block text-gray-700 text-sm font-medium">
                                 Country
                                 <span className="text-red-600">*</span>
@@ -188,7 +190,6 @@ function CreateCustomer() {
                                 required
                             />
                         </div>
-                    </div>
 
                     <div className="mt-4">
                         <label htmlFor="Contact" className="block text-gray-700 text-sm font-medium ">
@@ -337,7 +338,7 @@ function CreateCustomer() {
                     <div className="mt-6">
                         <button
                             type="submit"
-                            className="px-4 py-2 w-full bg-[#1D3557] text-white text-sm rounded-md hover:bg-gray-600"
+                            className="px-4 py-2 w-full bg-[#1D3557] text-white text-sm rounded-full hover:bg-gray-800"
                         >
                             Submit
                         </button>

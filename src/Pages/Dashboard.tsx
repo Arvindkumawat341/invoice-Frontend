@@ -264,7 +264,7 @@ function Dashboard() {
                                             </button>
                                         )}
                                     </td>
-                                    <td className="h-10 px-2 md:px-4 text-left text-xs md:text-sm">
+                                    <td className="h-10 px-2 md:px-4 flex items-center gap-4 text-left text-xs md:text-sm">
                                         <button
                                             onClick={async () => {
                                                 setSelectedInvoice(data);
@@ -274,7 +274,7 @@ function Dashboard() {
                                                     }
                                                 }, 100);
                                             }}
-                                            className="text-green-600 mr-4"
+                                            className="text-green-600"
                                         >
                                             <Download size={24} />
                                         </button>

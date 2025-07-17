@@ -77,23 +77,23 @@ function Customer() {
         </h1>
 
         <div className="flex flex-wrap items-end justify-end mt-5 gap-4">
-          <button
-            onClick={() => navigate("/createcustomer", { state: { from: "customer" } })}
-            className="flex items-center gap-1 font-semibold rounded-md text-xs md:text-sm bg-white border px-2 py-1 hover:bg-gray-50"
-          >
-            <Plus size={15} />
-            Create Customer
-          </button>
           <div className="flex items-center border rounded-md p-1 w-32">
-            <FaSearch className="text-gray-400 mr-2" />
+            <FaSearch className="text-gray-400 mr-1" />
             <input
               type="text"
-              placeholder="Search"
+              placeholder="Search by name"
               value={search}
               onChange={handleSearch}
               className="outline-none flex-grow w-16 text-sm"
             />
           </div>
+          <button
+            onClick={() => navigate("/createcustomer", { state: { from: "customer" } })}
+            className="flex items-center gap-1 font-semibold rounded-md text-xs md:text-sm bg-[#1D3557] text-white border px-2 py-1 hover:bg-gray-800"
+          >
+            <Plus size={15} />
+            Create Customer
+          </button>
         </div>
 
         <div className="mt-5 overflow-x-auto">

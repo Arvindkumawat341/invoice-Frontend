@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { baseURL } from "../lib/constant.ts";
-import {  FileChartLine, MapPin, PackageSearch, Phone, Plus, Save, UserRound } from "lucide-react";
+import { FileChartLine, MapPin, PackageSearch, Phone, Plus, Save, UserRound } from "lucide-react";
 import jsPDF from "jspdf";
 import PdfTemplate from "@/components/ui/PdfTemplate.tsx";
 import html2canvas from "html2canvas";
 import { MdDeleteOutline } from "react-icons/md";
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 interface Customer {
     _id: string;
@@ -90,7 +90,6 @@ function CreateInvoice() {
     const [overallDiscount, setOverallDiscount] = useState<string>("");
     const templateRef = useRef<HTMLDivElement>(null);
     const [status, setStatus] = useState("");
-
     //Invoice
     const [invoice, setInvoice] = useState<Invoice>({
         id: "",
@@ -224,7 +223,7 @@ function CreateInvoice() {
                 toast.success(isUpdate ? "Invoice Updated successfully!" : "Invoice Created successfully!");
                 setTimeout(() => {
                     navigate("/");
-                }, 1000);
+                }, 500);
 
                 // Update invoice number in state if received
                 if (result.invoiceNumber) {
@@ -298,7 +297,7 @@ function CreateInvoice() {
                                 heightLeft -= pdfHeight;
                             }
 
-                            pdf.save(`Invoice_${result.invoiceNumber || invoice.name}.pdf`);
+                            pdf.save(`Invoice_${invoice.name || result.invoiceNumber}.pdf`);
                             ReactDOM.unmountComponentAtNode(pdfTemplateDiv);
                             document.body.removeChild(pdfTemplateDiv);
                         });
@@ -472,7 +471,7 @@ function CreateInvoice() {
                                 <div className="flex flex-wrap gap-2">
                                     <button
                                         onClick={() => navigate("/createcustomer", { state: { from: "invoice" } })}
-                                        className="flex items-center gap-1 font-semibold rounded-md bg-[#1D3557] text-white border px-2.5 py-1.5 hover:bg-gray-50 text-sm"
+                                        className="flex items-center gap-1 font-semibold rounded-md bg-[#1D3557] text-white border px-2.5 py-1.5 hover:bg-gray-800 text-sm"
                                     >
                                         <Plus size={15} />
                                         Create customer
@@ -540,7 +539,7 @@ function CreateInvoice() {
                                 <div>
                                     <button
                                         onClick={() => navigate("/createservice", { state: { from: "invoice" } })}
-                                        className="flex items-center gap-1 font-semibold rounded-md bg-[#1D3557] text-white border px-2.5 py-1.5 hover:bg-gray-50 text-sm"
+                                        className="flex items-center gap-1 font-semibold rounded-md bg-[#1D3557] text-white border px-2.5 py-1.5 hover:bg-gray-800 text-sm"
                                     >
                                         <Plus size={15} />
                                         Create Service

@@ -68,7 +68,7 @@ function Service() {
                 <button
                     onClick={() => navigate("/createservice", { state: { from: "service" } })}
 
-                    className="flex items-center gap-1 font-semibold rounded-md text-xs md:text-sm bg-white border px-2 py-1 hover:bg-gray-50"
+                    className="flex items-center gap-1 font-semibold rounded-md text-xs md:text-sm text-white bg-[#1D3557] border px-2 py-1 hover:bg-gray-800"
                 >
                     <Plus size={15} />
                     Create Service

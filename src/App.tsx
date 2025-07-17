@@ -11,7 +11,7 @@ function App() {
         <SideBar />
 
         {/* Main Content */}
-        <div className="flex-grow w-full p-4">
+        <div className="flex-grow w-full p-2 md:p-4">
           <Routes>
             <Route path="/*" element={<Index />} />
           </Routes>

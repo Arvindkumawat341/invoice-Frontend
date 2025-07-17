@@ -81,7 +81,7 @@ function CreateService() {
 
   return (
     <div className="container mx-auto px-0 py-0 sm:px-6 lg:px-8">
-      <div className="bg-white w-full max-w-2xl mx-auto border border-gray-200 rounded-xl shadow-lg">
+      <div className=" bg-white w-full max-w-2xl mx-auto border border-gray-200 rounded-xl shadow-lg">
         {/* Form Header */}
         <h1 className="bg-[#1D3557] rounded-t-lg text-xl sm:text-2xl text-white border-b border-gray-700 py-4 font-bold mb-4 text-center">
           Create Service
@@ -164,7 +164,7 @@ function CreateService() {
             </div>
 
             {/* GST Percentage */}
-            <div className="w-full sm:w-1/3">
+            <div className="w-full sm:w-1/3 mb-2">
               <label htmlFor="gstPercentage" className="block text-gray-700 font-medium text-sm mb-1">
                 GST Percentage
                 <span className="text-red-600">*</span>
@@ -191,7 +191,7 @@ function CreateService() {
           </div>
 
           {/* Total */}
-          <div>
+          <div >
             <label htmlFor="total" className="block text-gray-700 font-medium text-sm mb-1">
               Total Amount
               <span className="text-red-600">*</span>
@@ -209,7 +209,7 @@ function CreateService() {
           <div className="mt-2">
             <button
               type="submit"
-              className="w-full px-4 py-2 bg-[#1D3557] text-white text-sm font-semibold rounded-md hover:bg-[#2A4D7C] focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors duration-200 mt-2"
+              className="w-full px-4 py-2 bg-[#1D3557] text-white text-sm font-semibold rounded-full hover:bg-[#2A4D7C] focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors duration-200 mt-2"
             >
               Add Service
             </button>
